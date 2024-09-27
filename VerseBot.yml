@@ -1,0 +1,1126 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: VerseBot
+kind: app
+version: 0.1.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+    opening_statement: 質問はこちらに入力してください。質問しやすいように、よくある質問をクリックしても良いでしょう。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 採用活動としてメタバース上で学生と社員の交流会を開きます。メタバース交流会は従来のビデオ会議とどのような点が異なるのでしょうか？
+    - 地方企業の採用活動におけるメタバースの活用例を教えてください。
+    - 遠方の学生に向けた採用イベントの例を教えてください。
+    - 体験学習イベントを作るためのおすすめなメタバースサービスを３つくらい教えてください。
+    - メタバースを使ってイベントを行う際の注意事項はありますか？
+    suggested_questions_after_answer:
+      enabled: true
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: question-classifier
+      id: 1725426061475-true-1725426085825-target
+      selected: false
+      source: '1725426061475'
+      sourceHandle: 'true'
+      target: '1725426085825'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: knowledge-retrieval
+      id: 1725426085825-1-1725426140374-target
+      source: '1725426085825'
+      sourceHandle: '1'
+      target: '1725426140374'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725426140374-source-1725426220213-target
+      source: '1725426140374'
+      sourceHandle: source
+      target: '1725426220213'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725426220213-source-1725426288886-target
+      source: '1725426220213'
+      sourceHandle: source
+      target: '1725426288886'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: knowledge-retrieval
+      id: 1725426085825-2-1725426390429-target
+      source: '1725426085825'
+      sourceHandle: '2'
+      target: '1725426390429'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725426390429-source-1725426410738-target
+      source: '1725426390429'
+      sourceHandle: source
+      target: '1725426410738'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725426410738-source-1725426482446-target
+      source: '1725426410738'
+      sourceHandle: source
+      target: '1725426482446'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1725426061475-8f2bb2ac-13b5-446b-82f2-cfc407cefb65-1725426896869-target
+      source: '1725426061475'
+      sourceHandle: 8f2bb2ac-13b5-446b-82f2-cfc407cefb65
+      target: '1725426896869'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725426896869-source-1725426909885-target
+      source: '1725426896869'
+      sourceHandle: source
+      target: '1725426909885'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725426909885-source-1725427016633-target
+      source: '1725426909885'
+      sourceHandle: source
+      target: '1725427016633'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: if-else
+      id: 1725426041695-source-1725426061475-target
+      source: '1725426041695'
+      sourceHandle: source
+      target: '1725426061475'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1725426061475-fd2bb802-c964-4663-aaee-a8dc259093a7-1725430008370-target
+      source: '1725426061475'
+      sourceHandle: fd2bb802-c964-4663-aaee-a8dc259093a7
+      target: '1725430008370'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725430008370-source-1725430087323-target
+      source: '1725430008370'
+      sourceHandle: source
+      target: '1725430087323'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725430087323-source-1725430222467-target
+      source: '1725430087323'
+      sourceHandle: source
+      target: '1725430222467'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: knowledge-retrieval
+      id: 1725426085825-1725430754303-1725430810108-target
+      source: '1725426085825'
+      sourceHandle: '1725430754303'
+      target: '1725430810108'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725430810108-source-1725430851134-target
+      source: '1725430810108'
+      sourceHandle: source
+      target: '1725430851134'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725430851134-source-1725430910507-target
+      source: '1725430851134'
+      sourceHandle: source
+      target: '1725430910507'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1725426061475-85eacb53-d0f9-4771-a72d-243da6890562-1725431171140-target
+      source: '1725426061475'
+      sourceHandle: 85eacb53-d0f9-4771-a72d-243da6890562
+      target: '1725431171140'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1725431171140-source-1725431188019-target
+      source: '1725431171140'
+      sourceHandle: source
+      target: '1725431188019'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725431188019-source-1725431265695-target
+      source: '1725431188019'
+      sourceHandle: source
+      target: '1725431265695'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: llm
+      id: 1725426061475-false-1725431308719-target
+      source: '1725426061475'
+      sourceHandle: 'false'
+      target: '1725431308719'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1725431308719-source-1725431352462-target
+      source: '1725431308719'
+      sourceHandle: source
+      target: '1725431352462'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 開始
+        type: start
+        variables: []
+      height: 53
+      id: '1725426041695'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: contains
+            id: 8e775ff2-28ba-48ca-858a-72fff81c7074
+            value: サービス
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: ba607bf4-5f56-4f69-9406-90764c80fe29
+            value: 作り方
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: ca1cd9a1-303f-497c-84ab-7f7363e758c2
+            value: 空間
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 5335e737-dc61-4c7e-bb27-08e49b3d654a
+            value: アバター
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 'true'
+          logical_operator: or
+        - case_id: 8f2bb2ac-13b5-446b-82f2-cfc407cefb65
+          conditions:
+          - comparison_operator: contains
+            id: 08d6d6c7-b38d-40f7-bf7a-e7a988aa42a5
+            value: メリット
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 4cbe395d-8ec9-4088-aec8-49dfa735f11c
+            value: デメリット
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 8f2bb2ac-13b5-446b-82f2-cfc407cefb65
+          logical_operator: or
+        - case_id: fd2bb802-c964-4663-aaee-a8dc259093a7
+          conditions:
+          - comparison_operator: contains
+            id: 4cd0a7e7-76d0-4658-aa61-b69e0652a31a
+            value: 無断
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: b8f475a2-420a-469e-a081-b2c0ca8e5755
+            value: いやがらせ
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: f7f577bb-52e8-4556-8df5-e1170778c34c
+            value: ハラスメント
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 7a389090-bc84-48a4-84a9-2e556a380db4
+            value: レイプ
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: fc0152e0-fc39-4d64-b382-3228b7d3f7c7
+            value: 著作権
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 76eb6efe-4747-4403-a1a3-2196a30d7b57
+            value: 注意
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: fd2bb802-c964-4663-aaee-a8dc259093a7
+          logical_operator: or
+        - case_id: 85eacb53-d0f9-4771-a72d-243da6890562
+          conditions:
+          - comparison_operator: contains
+            id: ee344d0a-d077-4fe7-a854-3a69eb0cdc7f
+            value: 事例
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: e9ba8c46-9c93-4aed-9ae4-409cc0189045
+            value: ユースケース
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 85eacb53-d0f9-4771-a72d-243da6890562
+          logical_operator: or
+        desc: ''
+        selected: false
+        title: IF/ELSE
+        type: if-else
+      height: 529
+      id: '1725426061475'
+      position:
+        x: 502.0851200000001
+        y: 282
+      positionAbsolute:
+        x: 502.0851200000001
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        classes:
+        - id: '1'
+          name: サービス
+        - id: '2'
+          name: 空間
+        - id: '1725430754303'
+          name: アバター
+        desc: ''
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        selected: false
+        title: 質問分類器
+        topics: []
+        type: question-classifier
+      height: 223
+      id: '1725426085825'
+      position:
+        x: 974.9368772927876
+        y: 182.50347403806512
+      positionAbsolute:
+        x: 974.9368772927876
+        y: 182.50347403806512
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - 3a0979d8-0561-4c40-a696-3ed2d4ac7e11
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知識取得：メタバースサービス
+        type: knowledge-retrieval
+      height: 91
+      id: '1725426140374'
+      position:
+        x: 1307
+        y: 182.50347403806512
+      positionAbsolute:
+        x: 1307
+        y: 182.50347403806512
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725426140374'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 0dc80d9f-5549-469f-830a-017019798373
+          role: system
+          text: あなたがおすすめするメタバースサービスについて、なるべく簡潔かつわかりやすく説明してください。
+        - id: 4f6011cc-eddf-4e93-ba08-696eb627597b
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：サービス
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725426220213'
+      position:
+        x: 1609
+        y: 182.50347403806512
+      positionAbsolute:
+        x: 1609
+        y: 182.50347403806512
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725426220213.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答：サービス
+        type: answer
+        variables: []
+      height: 121
+      id: '1725426288886'
+      position:
+        x: 1915
+        y: 182.50347403806512
+      positionAbsolute:
+        x: 1915
+        y: 182.50347403806512
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - 77d843ea-0bb6-4e88-953c-d133a5197cc0
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知識取得 ：仮想空間の作り方
+        type: knowledge-retrieval
+      height: 91
+      id: '1725426390429'
+      position:
+        x: 1306
+        y: 313.50347403806506
+      positionAbsolute:
+        x: 1306
+        y: 313.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725426390429'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: c404a9d1-aee4-4334-9716-808663742b4c
+          role: system
+          text: あなたがおすすめするメタバースサービス別のメタバース（仮想空間）の作り方について、簡潔かつわかりやすく説明してください。
+        - id: 284c6834-5898-4a9c-8658-b1b66fb129d1
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM ：仮想空間の作り方
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725426410738'
+      position:
+        x: 1609
+        y: 313.50347403806506
+      positionAbsolute:
+        x: 1609
+        y: 313.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725426410738.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答 ：仮想空間の作り方
+        type: answer
+        variables: []
+      height: 121
+      id: '1725426482446'
+      position:
+        x: 1915
+        y: 313.50347403806506
+      positionAbsolute:
+        x: 1915
+        y: 313.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - 68205bd4-9df5-42d6-a24a-6a2c2fbf5303
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知識取得：ビジネス上の長所短所
+        type: knowledge-retrieval
+      height: 91
+      id: '1725426896869'
+      position:
+        x: 1306
+        y: 581.8054181140528
+      positionAbsolute:
+        x: 1306
+        y: 581.8054181140528
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725426896869'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 48c24102-5c43-41e2-b47e-07ff65aebd63
+          role: system
+          text: メタバースをビジネス利用する際のメリットやデメリットについて、ビジネス上の視点から、なるべく簡潔かつわかりやすく説明してください。
+        - id: ae38d213-0b5a-4123-8b96-51fc136abd88
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：ビジネス上の長所短所
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725426909885'
+      position:
+        x: 1614.6943497793366
+        y: 581.8054181140528
+      positionAbsolute:
+        x: 1614.6943497793366
+        y: 581.8054181140528
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725426909885.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: '回答 : ビジネス上の長所短所'
+        type: answer
+        variables: []
+      height: 121
+      id: '1725427016633'
+      position:
+        x: 1915
+        y: 581.8054181140528
+      positionAbsolute:
+        x: 1915
+        y: 581.8054181140528
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - ee9cfbde-2059-430a-81fc-88d4e55f0152
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: '知識取得 : 注意すべきこと'
+        type: knowledge-retrieval
+      height: 91
+      id: '1725430008370'
+      position:
+        x: 1307
+        y: 733.4905583878077
+      positionAbsolute:
+        x: 1307
+        y: 733.4905583878077
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725430008370'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 6942c18c-5214-4c22-b75c-2ef480651e1f
+          role: system
+          text: メタバースをビジネス利用する際の注意事項、いやがらせやハラスメント、著作権侵害などについて、簡潔かつわかりやすく説明してください。
+        - id: 6c11380f-8d4e-44b8-8882-82f223c57a03
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：注意すべきこと
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725430087323'
+      position:
+        x: 1614.6943497793366
+        y: 733.4905583878077
+      positionAbsolute:
+        x: 1614.6943497793366
+        y: 733.4905583878077
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725430087323.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答：注意すべきこと
+        type: answer
+        variables: []
+      height: 121
+      id: '1725430222467'
+      position:
+        x: 1912
+        y: 733.4905583878077
+      positionAbsolute:
+        x: 1912
+        y: 733.4905583878077
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - bbde814e-29bb-4a06-af29-b48a6e3443a1
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知識取得：アバター
+        type: knowledge-retrieval
+      height: 91
+      id: '1725430810108'
+      position:
+        x: 1306
+        y: 443.50347403806506
+      positionAbsolute:
+        x: 1306
+        y: 443.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725430810108'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: a3ca7563-9001-4079-a85a-ff02e77ca049
+          role: system
+          text: あなたがおすすめするメタバースサービス別のアバターについて、簡潔かつわかりやすく説明してください。
+        - id: 243d085e-d7f6-4379-bb58-381e1c158dcf
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：アバター
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725430851134'
+      position:
+        x: 1609
+        y: 443.50347403806506
+      positionAbsolute:
+        x: 1609
+        y: 443.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725430851134.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答：アバター
+        type: answer
+        variables: []
+      height: 121
+      id: '1725430910507'
+      position:
+        x: 1912
+        y: 443.50347403806506
+      positionAbsolute:
+        x: 1912
+        y: 443.50347403806506
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - 2cba337c-2dde-45b0-ae64-79ee33c439fc
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: text-embedding-3-large
+              embedding_provider_name: openai
+              vector_weight: 1
+        query_variable_selector:
+        - '1725426041695'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知識取得：事例
+        type: knowledge-retrieval
+      height: 91
+      id: '1725431171140'
+      position:
+        x: 1306
+        y: 874.5754822145182
+      positionAbsolute:
+        x: 1306
+        y: 874.5754822145182
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1725431171140'
+          - result
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 77ffae07-7b85-4054-a5e6-f2e6d454e16d
+          role: system
+          text: あなたはメタバース作成を支援するコンサルタントです。メタバースの事例やユースケースについて、簡潔かつ丁寧に教えてください。
+        - id: 663294d0-5a5e-4131-b3e6-1c173e5b92f9
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：事例
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725431188019'
+      position:
+        x: 1609
+        y: 874.5754822145182
+      positionAbsolute:
+        x: 1609
+        y: 874.5754822145182
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725431188019.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答：事例
+        type: answer
+        variables: []
+      height: 121
+      id: '1725431265695'
+      position:
+        x: 1915
+        y: 874.5754822145182
+      positionAbsolute:
+        x: 1915
+        y: 874.5754822145182
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 9de60140-c770-4289-993c-4b0fdfd4d998
+          role: system
+          text: あなたは優秀なメタバースのコンサルタントです。お客様からのご質問について、簡潔に説明してください。
+        - id: d74290dc-320a-4d43-be99-78c49d3bcec9
+          role: user
+          text: '{{#context#}}'
+        selected: false
+        title: LLM：そのほか
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 97
+      id: '1725431308719'
+      position:
+        x: 1609
+        y: 1091.6713122815283
+      positionAbsolute:
+        x: 1609
+        y: 1091.6713122815283
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1725431308719.text#}}
+
+          そのほか不明点がありましたら、ご質問ください。'
+        desc: ''
+        selected: false
+        title: 回答：そのほか
+        type: answer
+        variables: []
+      height: 121
+      id: '1725431352462'
+      position:
+        x: 1912
+        y: 1091.6713122815283
+      positionAbsolute:
+        x: 1912
+        y: 1091.6713122815283
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: -142.21366351717262
+      y: -41.11400715022978
+      zoom: 0.6474442925739059
