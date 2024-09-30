@@ -9,7 +9,7 @@ IBM Cloud Virtual Server上の仮想マシンを使って、Difyを実装する�
 [DifyをIBM Cloud Virtual Serverで動かして、IBM Cloudについて質問できる基本のチャットボットを作るまで #ibmcloud - Qiita](https://qiita.com/kolinz/items/a27976f19f28fd4829d9)
 
 ## 試作チャットボットの再現方法
-Difyでは定義ファイル「DSLファイル」を使って、既に作成済みのアプリケーションを再現することができます。RAGを使っていますので、「ナレッジ機能」を使い下図のように文書を登録する必要があります。[文書](https://github.com/kolinz/versebot/tree/main/rag/knowledges)を１つ１つ登録後、DSLインポートを行ってください。
+Difyでは定義ファイル「DSLファイル(VerseBot.yml)」を使って、既に作成済みのアプリケーションを再現することができます。RAGを使っていますので、「ナレッジ機能」を使い下図のように文書を登録する必要があります。[文書](https://github.com/kolinz/versebot/tree/main/rag/knowledges)を１つ１つ登録後、DSLインポートを行ってください。
 DSLファイルのインポートには、[公式ドキュメント](https://docs.dify.ai/v/ja-jp/guides/application-orchestrate/creating-an-application)をご覧ください。
 
 ## フロントエンドをカスタマイズする場合
